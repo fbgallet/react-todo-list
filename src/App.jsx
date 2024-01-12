@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="todo-app">
       <Header tasks={tasks} setMatchingTasks={setMatchingTasks} />
-      <Form tasks={tasks} setTasks={setTasks} />
+      <Form setTasks={setTasks} />
       <div className="todo-list">
         {tasks.map(
           (task, index) =>

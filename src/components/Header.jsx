@@ -14,7 +14,9 @@ const Header = ({ tasks, setMatchingTasks }) => {
     const tasksClone = [...tasks];
     setMatchingTasks(
       tasksClone.map((task) =>
-        task.description.includes(event.target.value) ? true : false
+        task.description.toLowerCase().includes(event.target.value)
+          ? true
+          : false
       )
     );
   };

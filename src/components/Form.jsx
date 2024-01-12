@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { insertAsLastUndone } from "../utils";
 
-const Form = ({ tasks, setTasks }) => {
+const Form = ({ setTasks }) => {
   const [description, setDescription] = useState("");
 
   const handleChange = (event) => {
@@ -10,7 +11,9 @@ const Form = ({ tasks, setTasks }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!description) return;
-    setTasks((prev) => [...tasks, { description, done: false }]);
+    setTasks((tasks) =>
+      insertAsLastUndone([...tasks], { description, done: false })
+    );
     setDescription("");
   };
 

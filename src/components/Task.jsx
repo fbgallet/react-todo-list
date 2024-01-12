@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { insertAsLastUndone } from "../utils";
 
 const Task = ({ task, taskIndex, setTasks }) => {
   const handleCheck = (event) => {
@@ -6,12 +7,7 @@ const Task = ({ task, taskIndex, setTasks }) => {
       const updatedTasks = [...tasks];
       updatedTasks[taskIndex].done = event.target.checked;
       const [thisTask] = updatedTasks.splice(taskIndex, 1);
-      let i = 0;
-      while (i < updatedTasks.length && updatedTasks[i].done === false) {
-        i++;
-      }
-      updatedTasks.splice(i, 0, thisTask);
-      return updatedTasks;
+      return insertAsLastUndone(updatedTasks, thisTask);
     });
   };
 
