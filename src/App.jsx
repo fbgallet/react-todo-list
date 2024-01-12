@@ -5,6 +5,7 @@ import Task from "./components/Task";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faTrash, faList, faSearch } from "@fortawesome/free-solid-svg-icons";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 library.add(faTrash, faList, faSearch);
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             )
         )}
       </div>
+      <Footer />
     </div>
   );
 }

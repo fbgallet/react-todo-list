@@ -3,6 +3,10 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 header {
@@ -75,6 +79,7 @@ header input {
 }
 
 .todo-list {
+  flex: 1;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -108,4 +113,9 @@ input[type="checkbox"] {
     align-items: flex-start;
     gap: 10px;
   }
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
 }
