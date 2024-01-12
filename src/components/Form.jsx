@@ -23,7 +23,7 @@ const Form = ({ tasks, setTasks }) => {
         value={description}
         onChange={handleChange}
       />
-      <button>Add</button>
+      <button>Add task</button>
     </form>
   );
 };

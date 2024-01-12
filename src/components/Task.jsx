@@ -28,7 +28,7 @@ const Task = ({ task, taskIndex, setTasks }) => {
       <input onChange={handleCheck} type="checkbox" checked={task.done} />
       <div className={task.done ? "done" : ""}>{task.description}</div>
       <button onClick={handleDelete}>
-        <FontAwesomeIcon icon="trash" size="sm" />
+        <FontAwesomeIcon icon="trash" size="sm" color="#5c48d3" />
       </button>
     </div>
   );

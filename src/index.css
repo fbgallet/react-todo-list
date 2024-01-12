@@ -3,9 +3,6 @@
    License: none (public domain)
 */
 
-* {
-  box-sizing: border-box;
-}
 html,
 body,
 div,
@@ -132,4 +129,7 @@ table {
 }
 button {
   border: none;
+}
+* {
+  box-sizing: border-box;
 }
